@@ -1,0 +1,28 @@
+button.buttonYellow {
+	--slds-c-button-color-background: #ffff00ec;
+    --sds-c-button-text-color: #000 !important; /* Change text color to black */
+}
+
+button.buttonGreen {
+	--slds-c-button-color-background: #00ff1a;
+    --sds-c-button-text-color: #000 !important; /* Change text color to black */
+}
+
+/* Override hover, active, and focus styles for both button styles */
+button.buttonYellow:hover,
+button.buttonGreen:hover,
+button.buttonYellow:active,
+button.buttonGreen:active,
+button.buttonYellow:focus,
+button.buttonGreen:focus {
+    --slds-c-button-color-background-hover: var(--sds-c-button-color-background);
+    --sds-c-button-text-color-hover: var(--sds-c-button-text-color);
+    --slds-c-button-color-background-active: var(--sds-c-button-color-background);
+    --sds-c-button-text-color-active: var(--sds-c-button-text-color);
+    --slds-c-button-color-backgroundd-focus: var(--sds-c-button-color-background);
+    --sds-c-button-text-color-focus: var(--sds-c-button-text-color);
+}
+
+.slds-card__body{
+background-color: #a6fcaf;
+}

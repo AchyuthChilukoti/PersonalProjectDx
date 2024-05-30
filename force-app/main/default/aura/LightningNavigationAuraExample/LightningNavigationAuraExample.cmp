@@ -1,0 +1,14 @@
+<aura:component implements="lightning:actionOverride,lightning:hasPageReference">
+    <lightning:navigation aura:id="navService"/>
+    <lightning:pageReferenceUtils aura:id="pageRefUtils"/>
+    <lightning:recordEditForm 
+                    objectApiName="Account"
+                    onload="{!c.handleCreateLoad}">
+        <lightning:messages />
+        <lightning:inputField aura:id="nameField" fieldName="Name"/>
+        <lightning:inputField aura:id="numOfEmpField" fieldName="NumberOfEmployees"/>
+        <lightning:inputField aura:id="ownerIdField" fieldName="OwnerId"/>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new" />
+        <lightning:button class="slds-m-top_small" type="cancel" label="Cancel" onclick="{!c.handleClick}"/>
+    </lightning:recordEditForm>
+</aura:component>

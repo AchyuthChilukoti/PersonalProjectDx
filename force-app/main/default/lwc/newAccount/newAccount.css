@@ -1,0 +1,77 @@
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 273px;
+  height: 343px;
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 83%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #cec5c5a6 transparent;
+}
+
+.tooltip:active .tooltiptext {
+  visibility: visible;
+} */
+
+/* .tooltip {
+  background-color: rgb(242, 242, 242);
+}
+
+.lgc-bg .lgc-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 83%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #cec5c5a6 transparent;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  /* left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.slds-popover.slds-nubbin_left{
+  position: absolute;
+  left:0rem;
+  top:-1.3rem;
+} */ 
+
+.popOverStyle{
+  width: 250px;
+  height: 300px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.buttonicon{
+  margin-right: 20px;
+}

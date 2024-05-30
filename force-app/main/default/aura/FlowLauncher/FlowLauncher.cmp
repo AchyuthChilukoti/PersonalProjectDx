@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="flowName" type="String" default="Upsert_Contact_from_Apex_in_Screen_Flow" />
+    
+    <lightning:flow aura:id="flowData" onstatuschange="{!c.handleFlowStatusChange}" />
+    
+    <lightning:button label="Launch Flow" onclick="{!c.launchFlow}" />
+</aura:component>

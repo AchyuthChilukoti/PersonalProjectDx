@@ -1,0 +1,18 @@
+<template>
+    <label>Enter Sub Tab Name</label>
+    <lightning-input onchange={handleTabName}  class ="slds-var-p-bottom_xx-small slds-var-p-top_xx-small reasonInput" type="Text" variant="label-hidden"
+        value={Name} label="Enter Sub Tab Name" 
+        maxlength="90" aria-required="true">
+    </lightning-input>
+
+    <label>Select Tab Icon</label>
+    <lightning-combobox class ="slds-var-p-bottom_small slds-var-p-top_xx-small adjustmentType" name="Icon" label="Icon"
+        variant="label-hidden" value="" placeholder="Please Select"
+        options={IconOptions} onchange={handleSelectIcon} >
+    </lightning-combobox>
+
+    <lightning-button  label="Launch Sub Tab" 
+        onclick={launchNewSubTab} >Launch Sub Tab</lightning-button>
+
+    <hr/>
+</template>

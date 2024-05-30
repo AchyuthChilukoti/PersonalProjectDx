@@ -1,0 +1,80 @@
+<template>
+    <lightning-card>
+        <!-- <button class="slds-button slds-button_neutral" onclick={uploadNewDocument}>
+            Add Files
+        </button> -->
+        
+        <table
+                    class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout"
+                    role="grid" style="width:100%">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <!--th scope="col">
+                                <div class="slds-truncate">Direct Cost Name</div>
+                            </th-->
+                            <th scope="col">
+                                <div class="slds-truncate">Amount</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">Currency</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">Description</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate">Date Issued</div>
+                            </th>
+                                <!-- <th scope="col">
+                                    <div class="slds-truncate">Support Documentation</div>
+                                </th> -->
+                                <th scope="col">
+                                    <div class="slds-truncate">Edit Record</div>
+                                </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={documents} for:item="document">
+                            <tr key={document.Id} class="slds-hint-parent">
+                               <!-- <td role="gridcell">
+                                    <div class="slds-truncate">{document.Id}</div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate">{document.OwnerId}</div>
+                                </td>-->
+                                <td role="gridcell">
+                                    <div class="slds-truncate">{document.Amount__c}</div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate">{document.CurrencyIsoCode}</div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate">{document.Description__c}</div>
+                                </td>
+                                <td role="gridcell">
+                                    <lightning-formatted-date-time value={document.Date_Issued__c} year="numeric"
+                                        month="numeric" day="numeric" time-zone="UTC">
+                                    </lightning-formatted-date-time>
+                                </td>
+                                <template if:false={isActiveContract}>
+                                    <!-- <td role="gridcell">
+                                        <div class="slds-truncate">
+                                            <a href="#" onclick={downloadDocument}
+                                                data-content-version-id={document.Content_Version_Id__c}>Download
+                                            </a>  
+                                        </div>
+                                    </td> -->
+
+                                    <td role="gridcell">
+                                       
+                                        <button name={document.Id} value={document.Content_Version_Id__c} class="slds-button slds-button_neutral" onclick={navigateToEditDirectCostPage}>
+                                            Edit
+                                        </button>    
+                                    </td>
+                                </template>
+
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>  
+    </lightning-card>
+</template>

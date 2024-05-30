@@ -1,0 +1,44 @@
+button.buttonAdd {
+	--slds-c-button-color-background: #f19d26ec;
+    --sds-c-button-text-color: #000 !important; /* Change text color to black */
+    width: 75px;
+}
+
+button.buttonSub {
+	--slds-c-button-color-background: #30f6ef;
+    --sds-c-button-text-color: #000 !important; /* Change text color to black */
+    width: 75px;
+}
+
+button.buttonMul {
+	--slds-c-button-color-background: #d155f0ec;
+    --sds-c-button-text-color: #000 !important; /* Change text color to black */
+    width: 75px;
+}
+
+button.buttonDiv {
+	--slds-c-button-color-background: #09c103;
+    --sds-c-button-text-color: #000 !important; /* Change text color to black */
+    width: 75px;
+}
+
+/* Override hover, active, and focus styles for both button styles */
+button.buttonAdd:hover,
+button.buttonSub:hover,
+button.buttonMul:hover,
+button.buttonDiv:hover,
+button.buttonAdd:active,
+button.buttonSub:active,
+button.buttonMul:active,
+button.buttonDiv:active,
+button.buttonAdd:focus,
+button.buttonSub:focus,
+button.buttonMul:focus,
+button.buttonDiv:focus {
+    --slds-c-button-color-background-hover: var(--sds-c-button-color-background);
+    --sds-c-button-text-color-hover: var(--sds-c-button-text-color);
+    --slds-c-button-color-background-active: var(--sds-c-button-color-background);
+    --sds-c-button-text-color-active: var(--sds-c-button-text-color);
+    --slds-c-button-color-backgroundd-focus: var(--sds-c-button-color-background);
+    --sds-c-button-text-color-focus: var(--sds-c-button-text-color);
+}

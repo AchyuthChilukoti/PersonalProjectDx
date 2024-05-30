@@ -1,0 +1,88 @@
+<template>
+    <template if:true={isAccountSearch}>
+        <lightning-card title="Dynamic Account Search Functionality in LWC" icon-name="standard:account">
+            
+            <lightning-layout multiple-rows="true" vertical-align="end">
+                <!-- <lightning-layout-item padding="around-small">
+                    <lightning-button-icon icon-name="utility:search" title="search"></lightning-button-icon>
+                </lightning-layout-item> -->
+
+                <lightning-layout-item size="12" small-device-size="10" medium-device-size="8" large-device-size="6" padding="around-small">
+
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="text-input-id-1">Enter Account Name</label>
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                            <lightning-icon size="x-small" class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="utility:search"></lightning-icon>
+                            <input type="text" id="text-input-id-1" class="slds-input" onchange={handleSearch}/>
+                        </div>
+                    </div>
+
+                        <!-- <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                        <lightning-input type="text" 
+                                                         label="Enter Account Name" 
+                                                         onchange={handleAccountName}
+                                                        ></lightning-input>
+                                </div>
+                            </div>  -->
+                </lightning-layout-item>
+                <!-- <lightning-layout-item size="12" small-device-size="2" medium-device-size="2" large-device-size="2" padding="around-small">
+                        <lightning-button label="Search" 
+                                          variant="brand" 
+                                          onclick={handleSearch}></lightning-button>
+                    </lightning-layout-item> -->
+                </lightning-layout><br/>
+
+                <div if:true={errorMsg} style="margin-left: 3%;">
+                    <p style="color: red;">{errorMsg}</p>
+                </div>
+    
+            <div if:true={searchData}>
+                <lightning-datatable data={searchData} 
+                                     columns={columns} 
+                                     key-field="id"
+                                     hide-checkbox-column="true"
+                                     onrowaction={viewAccountRecord}></lightning-datatable>
+            </div>
+        </lightning-card>
+        <template if:true={showAccountDetail}>
+            <lightning-card class="slds-m-top_medium">
+                <h1 class="slds-card_header slds-m-left_x-small"><b>Account Details</b></h1>
+                <div class="slds-card__body">
+                    <div class="slds-m-top_x-small slds-m-left_x-small slds-size_1-of-2">
+                        <lightning-input type="text" label="Account Name" value={AccName} lwc:ref="AccName"></lightning-input>
+        
+                        <lightning-input type="text" label="Phone" maxlength="10" value={PhnValue} name="Phone" lwc:ref="PhnValue"></lightning-input>
+                        <lightning-combobox
+                                name="Industry"
+                                label="Industry"
+                                value={IndValue}
+                                options={IndustryOptions}
+                                lwc:ref="IndValue">
+                            </lightning-combobox>
+                        
+                            <lightning-combobox
+                                name="Rating"
+                                label="Rating"
+                                value={RatingValue}
+                                options={ratingOptions}
+                                lwc:ref="RatingValue" >
+                            </lightning-combobox>
+                    </div>
+                    <div class="slds-m-top_x-small slds-size_1-of-2 slds-clearfix">
+                        <button label="SAVE" 
+                                             class="buttonYellow slds-button slds-button_neutral slds-float_right"
+                                              onclick={handleSave}>SAVE</button>
+                        
+                        <button label="SAVE" 
+                                            class="buttonGreen slds-button slds-button_neutral slds-float_right"
+                                              onclick={handleSave}>SAVE</button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:true={showCalculator}>
+        <c-basic-calculator></c-basic-calculator>
+    </template>
+</template>

@@ -1,0 +1,34 @@
+<template>
+    <lightning-card class="slds-m-top_large">
+        <h1 class="slds-card_header slds-m-left_x-small"><b>Calculator</b></h1>
+        <div class="slds-m-top_x-small slds-m-left_x-small slds-size_1-of-2">
+            <lightning-input type="number" label="Enter First Number" value={num1} lwc:ref="num1" required=true></lightning-input>
+            <lightning-input type="number" label="Enter Second Number" value={num2} lwc:ref="num2" required=true></lightning-input>
+        </div>
+        <div class="slds-m-top_x-small slds-m-left_x-small">
+            <button class="slds-size_1-of-4 slds-m-right_x-small buttonAdd slds-button slds-button_neutral" label="ADD" onclick={handleAdd}>ADD</button>
+            <button class="slds-size_1-of-4 slds-m-right_x-small buttonSub slds-button slds-button_neutral" label="SUB" onclick={handleSub}>SUB</button>
+            <button class="slds-size_1-of-4 slds-m-right_x-small buttonMul slds-button slds-button_neutral" label="MUL" onclick={handleMul}>MUL</button>
+            <button class="slds-size_1-of-4 slds-m-right_x-small buttonDiv slds-button slds-button_neutral" label="DIV" onclick={handleDiv}>DIV</button>
+        </div>
+        <h3 class="slds-m-left_x-small">Result : {result}</h3>
+        <div class="slds-m-top_medium slds-m-left_x-small slds-size_1-of-2">
+            <lightning-button class="slds-size_1-of-4 slds-m-right_x-small" label="View History" variant="brand" onclick={viewHistory}></lightning-button>
+        </div>
+        <div if:true={showHistory} class="slds-m-left_x-small">
+            <h2>Search History:</h2>
+            <ul>
+                <template for:each={searchHistory} for:item="historyItem">
+                    <li key={historyItem}>{historyItem}</li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+    <template if:true={showVideo} class="slds-m-top_x-small slds-m-left_x-small">
+        <lightning-card>
+            <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+                <iframe width="800" height="400" src="https://www.youtube.com/embed/020g-0hhCAU?si=Wr8MwB957XHveTk1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin: auto;"></iframe>
+            </div>
+        </lightning-card>
+    </template>
+</template>

@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,lightning:isUrlAddressable" access="global">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    <lightning:card title="Hello">
+        
+        <p>Hii ! this is LWC to AURA Navigation Example.</p>
+
+        <c:inputFieldStyling></c:inputFieldStyling>
+        
+    </lightning:card>
+</aura:component>
