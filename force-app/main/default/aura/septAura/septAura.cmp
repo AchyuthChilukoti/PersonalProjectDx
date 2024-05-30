@@ -1,0 +1,11 @@
+<aura:component >
+	<div class="slds-align_absolute-center" >HELLO WORLD!!</div>
+    <aura:attribute name="Name" type="String" default="UI Programming"/>
+    {!v.Name}<br/>
+    <aura:attribute name="Age" type="Integer" default="21"/>
+    {!v.Age}<br/>
+    <aura:attribute name="Color" type="String[]" default="['RED','BLUE']"/>
+    {!v.Color[0]}<br/>
+    <aura:attribute name="ColorList" type="List" default="['RED','BLUE',3]"/>
+    {!v.ColorList[2]}<br/>
+</aura:component>

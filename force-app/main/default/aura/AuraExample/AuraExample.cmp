@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="messageFromLWC" type="String" default="" />
+    <lightning:card title="Aura Example">
+        <c:basicLWCFromAura aura:id="childCmp" valueFromAura="Hi i'm Aura" onmessagefromlwc="{!c.handleMessageFromLWC}"/>
+        <lightning:button label="Call LWC Method" onclick="{!c.callLWCMethod}" />
+        <h1>{!v.messageFromLWC}</h1>
+    </lightning:card>
+</aura:component>

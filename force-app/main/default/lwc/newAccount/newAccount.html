@@ -1,0 +1,120 @@
+<template>
+    <lightning-card title="Create Account Record using LDS">
+        <lightning-layout>
+            <lightning-layout-item >
+                <!-- <lightning-input class="slds-p-around_medium" label="Name" name="accoutName" onchange={nameChangedHandler}></lightning-input>
+                <lightning-combobox class="slds-p-around_medium" name="accountRating" label="Rating"  placeholder="Select Rating" options={options} onchange={ratingChangeHandler}></lightning-combobox> -->
+                </br>
+                </br>
+            </br>
+        </br>
+    </br>
+</br>
+</br>
+<!-- </br>
+                <lightning-input class="slds-p-around_medium" label="Account Number" name="accoutNumber" onchange={numberChangedHandler}></lightning-input>
+                <lightning-input class="slds-p-around_medium" label="WebSite" name="accoutWebSite" onchange={websiteChangedHandler} ></lightning-input>
+                <lightning-input class="slds-p-around_medium" label="Phone" type="phone" name="accountPhone" onchange={phoneChangedHandler}></lightning-input>
+                <br/>
+                <lightning-button class="slds-m-left_x-small" label="Create Account" variant="brand" onclick={createAccount}></lightning-button> -->
+            </lightning-layout-item>
+
+
+            <!--Tool tip with bottom text-->
+            <lightning-layout-item>
+                <!-- <div class="tooltip">
+                    <lightning-icon icon-name="utility:info_alt" size="small" variant="success" onclick={showToolTipText}></lightning-icon>
+                      <div if:true={showToolTip}>
+                        <span class="tooltiptext">Tooltip text</span>
+                      </div>
+                        
+                    </div> -->
+                    <!-- <div class="tooltip">
+                        <lightning-button-menu alternative-text="Show menu" menu-alignment="right" variant="bare" icon-name="utility:info_alt">
+                        <lightning-menu-item class="slds-float_right" label="Refund Points"></lightning-menu-item>
+                        <lightning-menu-item class="slds-float_right" label="Refund Points"></lightning-menu-item>
+                        <lightning-menu-item class="slds-float_right" label="Refund Points"></lightning-menu-item>
+                        <lightning-menu-item class="slds-float_right" label="Refund Points"></lightning-menu-item>
+                        <lightning-menu-item class="slds-float_right" label="Refund Points"></lightning-menu-item>
+                    </lightning-button-menu>
+                    </div> -->
+<!--                     
+                    <div class="slds-is-relative slds-col slds-size_5-of-12 slds-float_right ">
+                        <section if:true={opt.checked} class="slds-popover slds-nubbin_left" role="dialog">
+                            <div class="slds-popover__body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                    dolore magna aliqua.</p>
+                            </div>
+                        </section>
+                    </div> -->
+
+                    <!-- <div class="slds-p-top_medium" role="group">
+                        <button type="button" class="slds-button slds-button_neutral" data-container="body" data-toggle="popover" data-placement="bottom" title="Popover title" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Tooltip on bottom</button>
+                      </div> -->
+
+                      <!-- <lightning-icon icon-name="utility:info_alt" size="small" variant="success" onclick={showToolTipText}></lightning-icon>
+                      <div if:true={showToolTip}>
+                        <section> -->
+                            <!-- <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-float_right slds-popover__close" title="Close dialog">
+                            <svg class="slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Close dialog</span>
+                            </button> -->
+
+                            <lightning-icon icon-name="utility:info_alt" size="small" onclick={showToolTipText} class="slds-button slds-button_icon slds-button_icon-small slds-float_right buttonicon"></lightning-icon >
+                                <div if:true={showToolTip}>
+                                <section aria-label="Dialog title" aria-describedby="popover-body-id" class="slds-popover slds-nubbin_top-right popOverStyle" role="dialog">
+                                <div id="popover-body-id" class="slds-popover__body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quaerat? Accusamus excepturi eos, molestias expedita distinctio eligendi ut esse quasi!</p>
+                                </div>
+                            </section>
+                        </div>
+
+            </lightning-layout-item>
+
+           
+        </lightning-layout>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right"
+                aria-labelledby="element-with-table-label other-element-with-table-label">
+                <thead>
+                   <tr>
+                      <th>HeaderKey</th>
+                      
+                      <th>HeaderValue</th>
+                      
+                      <th></th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <!-- <template for:each={filterList} for:item="filterData" for:index="index">
+                      <tr key={filterData}> -->
+                         <td>
+                            <lightning-input type="text" name="headerKey"
+                               variant="label-hidden" placeholder="" onchange={handleChange}
+                               value="">
+                            </lightning-input>
+                         </td>
+                         
+                         
+                         <td>
+                            <lightning-input type="text" name="headerValue"
+                               value="" variant="label-hidden" onchange={handleChange}>
+                            </lightning-input>
+                         </td>
+                         <!-- <td>
+                            <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                               icon-name="action:new" onclick={handleAddRow}></lightning-button-icon>
+                            <lightning-button-icon data-index={filterData.id} class="slds-float--right"
+                               icon-name="action:delete" onclick={handleRemoveRow}></lightning-button-icon>
+                         </td> -->
+                      <!-- </tr>
+                   </template> -->
+                </tbody>
+             </table>
+             <div class="slds-p-left_x-large slds-p-top_x-large">
+                <button class="slds-button slds-button_brand" onclick={downloadUserDetails}>Submit</button>
+            </div>
+            
+    </lightning-card>
+</template>

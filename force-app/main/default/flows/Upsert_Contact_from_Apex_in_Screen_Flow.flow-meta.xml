@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Upsert_Contact_from_Apex_in_SF</name>
+        <label>Upsert Contact from Apex in SF</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <actionName>UpsertContactToFlow</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>ContactName</name>
+            <value>
+                <elementReference>Enter_Last_Name</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>UpsertContactToFlow</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Upsert Contact from Apex in Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Upsert Contact from Apex in Screen Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Upsert_Contact_from_Apex_in_Screen_Flow</name>
+        <label>Upsert Contact from Apex in Screen Flow</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Upsert_Contact_from_Apex_in_SF</targetReference>
+        </connector>
+        <fields>
+            <name>Enter_Last_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Enter Last Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Upsert</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Upsert_Contact_from_Apex_in_Screen_Flow</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

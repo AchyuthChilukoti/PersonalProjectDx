@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForRecordHome,lightning:hasPageReference,force:hasRecordId,lightning:actionOverride,lightning:isUrlAddressable"  access="global">
+
+<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+<aura:attribute name="url" type="String"/>
+    <aura:attribute name="pageReference" type="Object"/>
+</aura:component>	

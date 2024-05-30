@@ -1,0 +1,17 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false">
+    <apex:includeLightning />
+    <div id="container" style="display:none;">
+        <c-_Flow_Launcher />
+    </div>
+    <script>
+        $Lightning.use("c:FlowLauncherApp", function() {
+            $Lightning.createComponent("c:FlowLauncher",
+                {},
+                "container",
+                function(component) {
+                    // Handle component creation
+                }
+            );
+        });
+    </script>
+</apex:page>

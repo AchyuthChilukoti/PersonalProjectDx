@@ -1,0 +1,99 @@
+<template>
+    <div class="grid-container slds-p-around_small">
+      
+      <div>
+        <!--purchase Order Number-->
+        <lightning-input
+          class="i"
+          data-id="purchaseOrderNumber"
+          data-obj="order"
+          type="text"
+          placeholder="Type here the Order Number..."
+          label="purchase Order Number"
+          value="123"
+          onchange={handleChange}
+          disabled={isOrderLocked}
+          required
+        ></lightning-input>
+      </div>
+
+      <div>
+        <!--purchase Order Date-->
+        <lightning-input
+          class="i"
+          label="purchase Order Date"
+          data-id="purchaseOrderDate"
+          data-obj="order"
+          type="date"
+          value={}
+          max={maxPurchaseOrderDate}
+          onchange={handleChange}
+          required
+        ></lightning-input>
+      </div>
+      
+      <div>
+        <!--requested Delivery Date-->
+        <lightning-input
+          class="slds-size_12-of-12"
+          type="date"
+          date-style="short"
+          data-id="requestedDeliveryDate"
+          data-obj="orderDeliveryGroup"
+          value={}
+          min={minDeliveryDate}
+          max={maxDeliveryDate}
+          label="requested Delivery Date"
+          onchange={handleChange}
+          message-when-range-overflow="reqDeliveryDateGreaterErrLabel"
+          message-when-range-underflow="labels.reqDeliveryDateSmallerErrLabel"
+          required
+        ></lightning-input>
+      </div>
+      
+    </div>
+
+
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+        <span>1</span>
+        </div>
+        <div class="slds-col">
+            <lightning-input
+            class="slds-size_12-of-12"
+            type="date"
+            date-style="short"
+            data-id="requestedDeliveryDate"
+            data-obj="orderDeliveryGroup"
+            value={}
+            min={minDeliveryDate}
+            max={maxDeliveryDate}
+            label="requested Delivery Date"
+            onchange={handleChange}
+            message-when-range-overflow="reqDeliveryDateGreaterErrLabel"
+            message-when-range-underflow="labels.reqDeliveryDateSmallerErrLabel"
+            required
+          ></lightning-input>
+        </div>
+        <div class="slds-col">
+        <span>3</span>
+        </div>
+        </div>
+
+
+        <lightning-input
+          class="dateStyle"
+          type="date"
+          date-style="short"
+          data-id="requestedDeliveryDate"
+          data-obj="orderDeliveryGroup"
+          value={}
+          min={minDeliveryDate}
+          max={maxDeliveryDate}
+          label="requested Delivery Date"
+          onchange={handleChange}
+          message-when-range-overflow="reqDeliveryDateGreaterErrLabel"
+          message-when-range-underflow="labels.reqDeliveryDateSmallerErrLabel"
+          required
+        ></lightning-input>
+  </template>
