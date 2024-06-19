@@ -22,12 +22,6 @@ public class TrainDetails {
                 }
             }
 
-            // Check the train delay and mark text color
-            if (trDetWrap.data != null) {
-                for (Data dataItem : trDetWrap.data) {
-                    dataItem.delayColor = addDelayTextColor(dataItem.delay);
-                }
-            }
         }
         return trDetWrap;
     }
@@ -70,16 +64,6 @@ public class TrainDetails {
     
         return hoursStr + ':' + minutesStr + ' ' + period;
     }
-
-    private static String addDelayTextColor(String delay) {
-        if (String.isBlank(delay)) {
-            return 'black';
-        }
-        else if(Integer.valueOf(delay)<=10){
-            return 'green';
-        }
-        return 'red';
-    }
     
 
     public class TrainDetailsWrapper {
@@ -98,6 +82,5 @@ public class TrainDetails {
         @AuraEnabled public String delay { get; set; }
         @AuraEnabled public String platform { get; set; }
         @AuraEnabled public String halt { get; set; }
-        @AuraEnabled public String delayColor { get; set; }
     }
 }
