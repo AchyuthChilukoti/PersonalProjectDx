@@ -1,0 +1,5 @@
+<apex:page controller="RedirectController">
+    <apex:form>
+        <apex:commandButton value="Go to Home Page" action="{!redirectToHome}" />
+    </apex:form>
+</apex:page>

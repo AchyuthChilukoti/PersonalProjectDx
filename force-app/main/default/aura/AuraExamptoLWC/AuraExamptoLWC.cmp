@@ -1,0 +1,14 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+
+<aura:html tag="style">
+        .slds-modal__container{
+        height : auto;
+        
+        }
+        .modal-body{
+        height : auto !important;
+        max-height: auto !important;
+        }
+    </aura:html> 
+    <c:workProRequestCreationForm aura:id="workProRequestCreationForm" recordId="{!v.recordId}" onclose="{!c.handleClose}"></c:workProRequestCreationForm>
+</aura:component>

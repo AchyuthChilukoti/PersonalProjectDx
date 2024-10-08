@@ -24,13 +24,13 @@ export default class SendDataFromFlowtoLWC extends LightningElement {
     }
 
     // This setter will be called whenever the reactiveValue property changes
-    set reactiveValue(newValue) {
-        this._reactiveValue = newValue;
-        console.log('##29 reactiveValue =>', this._reactiveValues);
-    }
+    // set reactiveValue(newValue) {
+    //     this._reactiveValue = newValue;
+    //     console.log('##29 reactiveValue =>', this._reactiveValues);
+    // }
 
-    get reactiveValue() {
-        console.log('##33 reactiveValue =>', this.reactiveValue);
-        return this._reactiveValue;
-    }
+    // get reactiveValue() {
+    //     console.log('##33 reactiveValue =>', this.reactiveValue);
+    //     return this._reactiveValue;
+    // }
 }

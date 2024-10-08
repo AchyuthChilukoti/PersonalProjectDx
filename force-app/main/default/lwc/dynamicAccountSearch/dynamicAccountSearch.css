@@ -24,5 +24,9 @@ button.buttonGreen:focus {
 }
 
 .slds-card__body{
-background-color: #a6fcaf;
+background-color: #f2860b;
+}
+
+.testCSSClass{
+    color: #f2860b;
 }

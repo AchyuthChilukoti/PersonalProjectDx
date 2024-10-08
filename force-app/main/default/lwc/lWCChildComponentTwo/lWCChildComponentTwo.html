@@ -1,0 +1,15 @@
+<template>
+    <div class = 'plm-card-div plm-card-top-margin'>
+        <template for:each={cards} for:item="card" >
+            <lightning-card key={card}>
+                <h2>This is card {card}</h2>
+                <lightning-button 
+                    variant="Neutral" 
+                    label="Open Document"  
+                    onclick={handleClick} 
+                    class="slds-m-left_x-small">
+                </lightning-button>
+            </lightning-card>
+        </template>
+    </div>
+</template>

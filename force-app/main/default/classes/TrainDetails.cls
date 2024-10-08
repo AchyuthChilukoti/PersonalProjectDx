@@ -1,4 +1,4 @@
-public class TrainDetails {
+public without sharing class TrainDetails {
 
     @AuraEnabled
     public static TrainDetailsWrapper getTrainDetails(String trainNo) {

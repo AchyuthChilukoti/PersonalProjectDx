@@ -7,11 +7,14 @@ const columns = [
         label: 'Id',
         fieldName: 'Id',
         type: 'button',
-        typeAttributes: { label: { fieldName: 'Id' }, variant: 'base'}
+        typeAttributes: { label: { fieldName: 'Id' }, variant: 'base'},
     },
     {
         label: 'Name',
-        fieldName: 'Name'
+        fieldName: 'Name',
+        cellAttributes: {
+            style: 'color: #f2860b;'
+        }
     }, {
         label: 'Industry',
         fieldName: 'Industry',
@@ -21,8 +24,18 @@ const columns = [
         type: 'phone',
     }, {
         label: 'Rating',
-        fieldName: 'Rating'
+        fieldName: 'Rating',
+        cellAttributes: {
+            class:'testCSSClass'
+        }
     },
+    {
+        label: 'Rating',
+        fieldName: 'Rating',
+        cellAttributes: {
+            style: { fieldName: 'ratingStyle' }
+        }
+    }
 ];
 
 export default class DynamicAccountSearch extends LightningElement {
@@ -38,6 +51,7 @@ export default class DynamicAccountSearch extends LightningElement {
     RatingValue = '';
     showCalculator = false;
     isAccountSearch = true;
+    ratingStyle = 'color: red;';
 
     get IndustryOptions() {
         return [
