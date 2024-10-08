@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Annual_RevenueDummyTest</fullName>
+    <active>false</active>
+    <description>Annual revenue</description>
+    <errorConditionFormula>AnnualRevenue &lt; 100000</errorConditionFormula>
+    <errorDisplayField>AnnualRevenue</errorDisplayField>
+    <errorMessage>Annual Revenue should be more than 100000</errorMessage>
+</ValidationRule>

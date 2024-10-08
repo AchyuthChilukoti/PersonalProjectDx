@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Edit Opportunity" icon-name="custom:custom63">
+        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+            <lightning-record-edit-form object-api-name="Opportunity" record-id={recordId}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="CloseDate"></lightning-input-field>
+                <lightning-button 
+                    type="submit" 
+                    name="submit" 
+                    label="Save Opportunity" 
+                    class="slds-m-top_small">
+                </lightning-button>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

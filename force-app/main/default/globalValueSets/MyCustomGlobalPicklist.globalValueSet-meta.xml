@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+   <customValue>
+      <fullName>Lion</fullName>
+      <default>false</default>
+      <label>Lion</label>
+   </customValue>
+   <customValue>
+      <fullName>Elephant</fullName>
+      <default>false</default>
+      <label>Elephant</label>
+   </customValue>
+   <customValue>
+      <fullName>Tiger</fullName>
+      <default>false</default>
+      <label>Tiger</label>
+   </customValue>
+   <customValue>
+      <fullName>Giraffe</fullName>
+      <default>false</default>
+      <label>Giraffe</label>
+   </customValue>
+   <customValue>
+      <fullName>Zebra</fullName>
+      <default>false</default>
+      <label>Zebra</label>
+   </customValue>
+   <customValue>
+      <fullName>Yalk</fullName>
+      <default>false</default>
+      <label>Yalk</label>
+   </customValue>
+   <customValue>
+      <fullName>Xebra</fullName>
+      <default>false</default>
+      <label>Xebra</label>
+   </customValue>
+   <sorted>true</sorted> <!-- Ensure that sorting is disabled -->
+   <masterLabel>Animal Global Picklist</masterLabel>
+   <description>This picklist contains animal names in non-alphabetical order</description>
+</GlobalValueSet>

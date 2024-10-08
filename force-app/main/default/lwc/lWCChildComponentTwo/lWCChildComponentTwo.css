@@ -1,0 +1,44 @@
+.standard-ui-card.slds-card__header.plm-account-detail-padding-top{
+	padding-top : 10px !important;
+}
+
+.plm-bottom-border{
+	border-bottom: 1px solid var(--c-cardColorBorder) !important;
+}
+.standard-ui-card.plm-card-bottom-margin{
+	margin-bottom : 15px !important;
+}
+.plm-card-div.plm-card-top-margin{
+	margin-top:15px !important;
+}
+.plm-card-div
+{
+	max-height: 100% !important;
+    overflow-y: auto;
+}
+.plm-card-div-mobile
+{
+	max-height: 100% !important;
+    overflow-y: auto;
+}
+/*.plm-card-div::-webkit-scrollbar {
+    width: 6px;
+}
+.plm-card-div::-webkit-scrollbar-track {
+    background: transparent;
+}
+.plm-card-div::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: transparent;
+}*/
+
+/*.plm-card-div-mobile::-webkit-scrollbar {
+    width: 6px;
+}
+.plm-card-div-mobile::-webkit-scrollbar-track {
+    background: transparent;
+}
+.plm-card-div-mobile::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: transparent;
+}*/

@@ -1,0 +1,11 @@
+<apex:page standardController="Account" extensions="AccountOrderController">
+    <apex:pageMessages />
+    <apex:form>
+        <apex:pageBlock title="Account Information">
+            <apex:pageBlockSection title="Order Information">
+                <apex:outputLabel value="Order" for="orderValue" />
+                <apex:outputText id="orderValue" value="{!account.Order__c}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

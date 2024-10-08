@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Custom Settings" icon-name="standard:settings">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Name" value={field1} onchange={handleField1Change}></lightning-input>
+            <lightning-input label="Age" value={field2} type="number" onchange={handleField2Change}></lightning-input>
+            <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

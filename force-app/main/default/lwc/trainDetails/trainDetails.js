@@ -21,18 +21,21 @@ export default class TrainDetails extends LightningElement {
 		
 		handleInputChange(event){
 				this.inputTrainNo = event.detail.value;
+				if(this.inputTrainNo.length >=5){
+					this.handleTrainInfo();
+				}
 		}
 		
 		handleTrainInfo(){
 				this.showSpinner = true;
 				this.showTrainDetails = false;
-				//console.log('inputTrainNo '+this.inputTrainNo);
+				console.log('inputTrainNo '+this.inputTrainNo);
 				getTrainDetails({trainNo : this.inputTrainNo})
 				.then((result) => {
 						this.showSpinner = false;
 						this.showTrainDetails = true;
 						this.trainDetails = result;
-						//console.log('trainDetails '+JSON.stringify(this.trainDetails));
+						console.log('trainDetails '+JSON.stringify(this.trainDetails));
 				})
 				.catch((error) =>{
 						this.showTrainDetails = false;

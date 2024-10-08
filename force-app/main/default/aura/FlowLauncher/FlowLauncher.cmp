@@ -1,7 +1,32 @@
-<aura:component implements="flexipage:availableForAllPageTypes">
+<aura:component extensible="true" implements="lightning:actionOverride,force:lightningQuickAction,flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:appHostable,lightning:isUrlAddressable" access="global">
     <aura:attribute name="flowName" type="String" default="Upsert_Contact_from_Apex_in_Screen_Flow" />
-    
-    <lightning:flow aura:id="flowData" onstatuschange="{!c.handleFlowStatusChange}" />
+    <aura:attribute name="isModalOpen" type="Boolean" default="true"/>
+    <aura:attribute name="start" type="boolean"/>
+    <!-- <lightning:flow aura:id="flowData" onstatuschange="{!c.handleFlowStatusChange}" /> -->
     
     <lightning:button label="Launch Flow" onclick="{!c.launchFlow}" />
+
+<aura:if isTrue="{!v.start}">
+    <!-- Modal Popup -->
+    <div role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aura:id="modal">
+        <div class="slds-modal__container" style="width: 80%; max-width: 80%;">
+            <!-- Modal/Popup Box -->
+            <div class="slds-modal slds-fade-in-open" aura:id="modalDialog" aria-hidden="{!not(v.isModalOpen)}">
+                <div class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium">New Case</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" style="padding-bottom: 50px" id="modal-content-id-1">
+                    <aura:if isTrue="{!v.isModalOpen}">
+                        <lightning:flow aura:id="flowData" onstatuschange="{!c.handleFlowStatusChange}"/>
+                    </aura:if>
+                </div>
+                <!--div class="slds-modal__footer">
+                    <lightning:button variant="neutral" label="Cancel" title="Cancel" onclick="{!c.closeModal}"/>
+                </div-->
+            </div>
+            <!--div class="slds-backdrop slds-backdrop_open"></div-->
+        </div>
+    </div>
+    <!-- Modal End -->
+</aura:if>
 </aura:component>

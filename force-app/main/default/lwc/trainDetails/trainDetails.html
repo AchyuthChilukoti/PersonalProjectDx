@@ -6,13 +6,13 @@
             <div class="slds-p-around_small slds-size_2-of-3">
 				<lightning-input type="text" required="true" label="Enter Train Number" onchange={handleInputChange}  placeholder="e.g 12312, 12302 ......"></lightning-input>
 			</div>
-			<div class="slds-p-around_small slds-p-left_large slds-size_1-of-3 status-button">
+			<!-- <div class="slds-p-around_small slds-p-left_large slds-size_1-of-3 status-button">
 				<lightning-button label="Get Train Status" variant="Brand" onclick={handleTrainInfo}></lightning-button>
-			</div>
+			</div> -->
         </div>
 
         <template lwc:if = {showSpinner}> 
-            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            <lightning-spinner class="spinner-container" alternative-text="Loading"></lightning-spinner>
         </template>
 			
         <template lwc:if = {showTrainDetails}>
