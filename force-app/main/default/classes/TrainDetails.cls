@@ -4,7 +4,7 @@ public without sharing class TrainDetails {
     public static TrainDetailsWrapper getTrainDetails(String trainNo) {
         Http http = new Http();
         HttpRequest req = new HttpRequest();
-        // Use the named credential 'TrainStatus'
+        // Use the named credential 'TrainStatus'  https://rappid.in/apis
         req.setEndpoint('callout:TrainStatusAPI/train.php?train_no=' + trainNo);
         req.setMethod('GET');
         System.debug('req ' + req);

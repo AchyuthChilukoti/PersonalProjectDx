@@ -1,14 +1,22 @@
 <aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="checkboxValue" type="boolean" default="true"/>
 
-<aura:html tag="style">
+    <aura:html tag="style">
         .slds-modal__container{
-        height : auto;
-        
+            height : auto;
         }
         .modal-body{
-        height : auto !important;
-        max-height: auto !important;
+            height : auto !important;
+            max-height: auto !important;
         }
     </aura:html> 
-    <c:workProRequestCreationForm aura:id="workProRequestCreationForm" recordId="{!v.recordId}" onclose="{!c.handleClose}"></c:workProRequestCreationForm>
+
+    <lightning:input type="checkbox" label="Add pepperoni" name="addPepperoni" checked="{!v.checkboxValue}" value="{!v.checkboxValue}"
+                     onchange="{!c.onChangeMethod}" aura:id="checkbox"/>
+    <c:workProRequestCreationForm aura:id="workProRequestCreationForm" 
+                                  recordId="{!v.recordId}" 
+                                  onclose="{!c.handleClose}">
+    </c:workProRequestCreationForm>
 </aura:component>

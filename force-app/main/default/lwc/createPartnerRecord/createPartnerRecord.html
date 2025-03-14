@@ -1,0 +1,66 @@
+<template>
+    
+    <!-- <lightning-modal-body>
+        <lightning-record-edit-form object-api-name="AccountPartner">
+            <lightning-messages></lightning-messages>
+            <label for="partnerAccount" >Partner Account</label>
+            <abbr title="required" class="slds-required">*</abbr>
+            <lightning-input-field id="partnerAccount" required field-name="AccountToId" value={partnerAccountId} variant="label-hidden" onchange={handlePartnerChange}></lightning-input-field>
+            <label for="partnerRole">Role</label>
+            <abbr title="required" class="slds-required">*</abbr>
+            <lightning-input-field id="partnerRole" field-name="Role" variant="label-hidden" value={role} disabled="true" onchange={handleRoleChange} ></lightning-input-field>
+        </lightning-record-edit-form>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <div class="slds-grid slds-grid_align-spread slds-grid_align-right">
+            <lightning-button
+                class="slds-button"
+                variant="neutral"
+                label="Cancel"
+                onclick={handleCancel}
+                data-id="cancel-button"
+            ></lightning-button>
+            <lightning-button
+                class="slds-button slds-float_right"
+                variant="brand"
+                label="Save"
+                onclick={createPartner}
+            ></lightning-button>
+        </div>
+    </lightning-modal-footer> -->
+
+
+
+    <lightning-quick-action-panel header="My action">
+        <h1>Title : Partner Account From Light Quick Action Panel </h1>
+
+        <lightning-record-edit-form object-api-name="AccountPartner">
+            <lightning-messages></lightning-messages>
+            <label for="partnerAccount" >Partner Account</label>
+            <abbr title="required" class="slds-required">*</abbr>
+            <lightning-input-field id="partnerAccount" required field-name="AccountToId" value={partnerAccountId} variant="label-hidden" onchange={handlePartnerChange}></lightning-input-field>
+            <label for="partnerRole">Role</label>
+            <abbr title="required" class="slds-required">*</abbr>
+            <lightning-input-field id="partnerRole" field-name="Role" variant="label-hidden" value={role} disabled="true" onchange={handleRoleChange} ></lightning-input-field>
+        </lightning-record-edit-form>
+        
+        <div slot="footer">
+            <div class="slds-grid slds-grid_align-spread slds-grid_align-right">
+                <lightning-button
+                    class="slds-button"
+                    variant="neutral"
+                    label="Cancel"
+                    onclick={handleCancel}
+                    data-id="cancel-button"
+                ></lightning-button>
+                <lightning-button
+                    class="slds-button slds-float_right"
+                    variant="brand"
+                    label="Save"
+                    onclick={createPartner}
+                ></lightning-button>
+            </div>
+        </div>
+    </lightning-quick-action-panel>
+     
+</template>

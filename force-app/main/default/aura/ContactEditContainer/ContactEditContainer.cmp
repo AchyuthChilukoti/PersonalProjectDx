@@ -1,0 +1,7 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId" access="global">
+    <!-- Aura to pass the recordId to LWC -->
+    <aura:attribute name="recordId" type="String" />
+
+    <!-- LWC Component invocation -->
+    <c:contactEditForm recordId="{!v.recordId}" />
+</aura:component>

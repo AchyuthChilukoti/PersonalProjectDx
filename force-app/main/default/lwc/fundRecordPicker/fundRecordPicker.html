@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Fund Record Picker">
+        <div class="slds-p-around_medium">
+            <!-- lightning-record-picker with dynamic filter -->
+            <lightning-record-picker 
+                label="Select Fund" 
+                object-api-name="Account"
+                value={selectedFund}
+                options={fundOptions}
+                onchange={handleChange}
+                filter={fundFilter}>
+            </lightning-record-picker>
+        </div>
+    </lightning-card>
+</template>

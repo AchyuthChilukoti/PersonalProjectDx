@@ -35,7 +35,12 @@
       <default>false</default>
       <label>Xebra</label>
    </customValue>
-   <sorted>true</sorted> <!-- Ensure that sorting is disabled -->
+   <customValue>
+      <fullName>Ant</fullName>
+      <default>false</default>
+      <label>Ant</label>
+   </customValue>
+   <sorted>false</sorted> <!-- Ensure that sorting is disabled -->
    <masterLabel>Animal Global Picklist</masterLabel>
    <description>This picklist contains animal names in non-alphabetical order</description>
 </GlobalValueSet>

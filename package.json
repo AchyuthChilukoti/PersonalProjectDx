@@ -43,7 +43,9 @@
     ]
   },
   "dependencies": {
+    "html2canvas": "^1.4.1",
     "jsforce": "^3.1.0",
+    "jspdf": "^2.5.2",
     "request": "^2.88.2"
   }
 }
