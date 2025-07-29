@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Smart Escalation Dashboard">
+
+        <div class="slds-p-horizontal_medium slds-m-bottom_small slds-text-align_right">
+            <lightning-button label="Refresh" onclick={refreshData}></lightning-button>
+        </div>
+
+        <div class="dashboard">
+            <c-case-urgency-group
+                category-name="🔴 Critical"
+                cases={criticalCases}
+            ></c-case-urgency-group>
+            <c-case-urgency-group
+                category-name="🟠 Warning"
+                cases={warningCases}
+            ></c-case-urgency-group>
+            <c-case-urgency-group
+                category-name="🟢 Safe"
+                cases={safeCases}
+            ></c-case-urgency-group>
+        </div>
+    </lightning-card>
+</template>

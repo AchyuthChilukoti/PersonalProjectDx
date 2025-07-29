@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title={categoryName}>
+        <div class="slds-m-around_medium">
+            <p><strong>Total: {cases.length}</strong></p>
+
+            <template if:true={cases.length}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={tableData}
+                    columns={columns}
+                    hide-checkbox-column
+                ></lightning-datatable>
+            </template>
+
+            <template if:false={cases.length}>
+                <p>No cases.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
